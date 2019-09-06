@@ -9,13 +9,15 @@ public class CapsuleMovement : MonoBehaviour
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(10 * Mathf.Sin(Time.time), 10 * Mathf.Cos(Time.time), 0);
+        CapsuleZoomDownScreen();
+    }
 
-        // General waveform equation.
-        // output = amplitude * sin(frequency * T + frequencyOffset) + baselineOffset;
+    // Update is called once per frame
+    void CapsuleZoomDownScreen()
+    {
+        transform.position = new Vector3(2 * Mathf.Tan(Time.time), 0, 2 * Mathf.Tan(Time.time));
+        
     }
 }
